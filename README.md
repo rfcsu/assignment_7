@@ -77,3 +77,24 @@ Meeting Time: 8:00 a.m.
 
 The program utilizes basic operations of Python dictionaries, highlighting the efficiency of lookups, which are generally O(1) on average. This means that regardless of how many items are in the dictionary, looking up a key takes a constant amount of time. The decision to use dictionaries stems from the need for mapping unique identifiers (course numbers) to various attributes in a way that is quick and easy to maintain.
 
+### Next Steps
+
+#### Step 1: Persistence (Optional)
+We need to convert the `dict` structures to persistent and retrievable data with a key:value store or database, consider Redis for this.
+
+#### Step 2: User Input Interface
+Provide a user-friendly interface for entering new course information. This interface should prompt the user for the course number, room number, instructor name, and meeting time. Ensure input validation is in place to check for correct formats and prevent erroneous data entry.
+
+#### Step 3: Verification
+Before adding a new course, verify whether the course already exists in the system to avoid duplicates. If the course is already present, inform the user and possibly offer to update the existing entry instead.
+
+#### Step 4: Adding the Course
+If the course does not exist, proceed to add the new course information to the respective dictionaries. This process involves appending new key-value pairs to each related dictionary:
+
+- **Course-Room Dictionary:** Add the course number and its corresponding room number.
+- **Course-Instructor Dictionary:** Add the course number and the assigned instructor's name.
+- **Course-Time Dictionary:** Add the course number and its meeting time.
+
+#### Step 5: Confirmation
+After successfully adding the course, provide a confirmation message to the user. This reassures the user that the data has been correctly entered into the system.
+
